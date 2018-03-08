@@ -1,5 +1,5 @@
 <span class="sidebar">
-  <h2>Tag List</h2>
+  <h2>Category List</h2>
   <ul>
   {{ range first 10 .Site.Taxonomies.categories.ByCount }}
     <li><a href="/categories/{{ .Name | urlize }}">{{ .Name }}</a> ({{ .Count }})</li>
