@@ -549,7 +549,6 @@ footer {
     top: 50%;
     right: 0;
     opacity: 1;
-    position: absolute;
     visibility: visible;
     height: 99%;
     box-shadow: 0 3px 7px rgba(0,0,0,.25);
