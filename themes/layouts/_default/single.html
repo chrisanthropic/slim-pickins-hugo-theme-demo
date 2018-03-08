@@ -1,0 +1,31 @@
+{{ partial "head.html" . }}
+
+<div class="grid" id="single">
+  {{ partial "header.html" . }}
+  {{ partial "horizontal_navigation.html" . }}
+
+  <main class="content">
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <section class="md-cats">
+                <p class="postmeta">{{ .Date.Format "02 January 2006" }}</p>
+
+                        <p>
+                            {{ with .Params.author }}
+                                By <strong>{{ . }}</strong>
+                            {{ end }}
+                        </p>
+
+                </section>
+    {{ .Content }}
+
+</article>
+  </main>
+  <aside class="side">
+    {{ if .Params.toc }}{{ partial "toc-sidebar.html" . }}{{ end }}
+    {{ partial "recent_posts.html" . }}
+  </aside>
+  {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

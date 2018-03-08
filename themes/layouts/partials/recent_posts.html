@@ -1,0 +1,12 @@
+<span class="sidebar">
+  <h2>Recent Posts</h2>
+  <ul>
+    {{ $kind := where .Site.RegularPages "Section" "!=" "" }}
+    {{ $othr := where $kind "URL" "!=" .URL }}
+    {{ range first 10 $othr }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</span>

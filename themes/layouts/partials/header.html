@@ -1,0 +1,7 @@
+<header class="main-head">
+    {{ if .Page.Params.header }}
+      <img src="/images/{{ .Page.Params.header }}">
+    {{ else }}
+      <img src="/images/{{ .Site.Params.header }}">
+    {{ end }}
+</header>

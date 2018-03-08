@@ -1,0 +1,18 @@
+name = "Slim Pickins"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "A minimal mobile theme with CSS grid and no javascript."
+homepage = "https://slim-pickins-hugo-theme.netlify.com"
+tags = []
+features = []
+min_version = "0.32.4"
+
+[author]
+  name = "chrisanthropic"
+  homepage = "https://www.chrisanthropic.com/"
+
+# If porting an existing theme
+[original]
+  name = "Slim Pickins Jekyll Theme"
+  homepage = "http://chrisanthropic.github.io/slim-pickins-jekyll-theme/"
+  repo = "https://github.com/chrisanthropic/slim-pickins-jekyll-theme"

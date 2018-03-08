@@ -1,0 +1,16 @@
+{{ partial "head.html" . }}
+
+<div class="grid" id="about">
+  {{ partial "header.html" . }}
+  {{ partial "horizontal_navigation.html" . }}
+
+  <main class="content">
+    <span><img src="{{ .Params.logo }}" class="logo"></span>
+    {{ .Content }}
+  </main>
+
+  {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>
