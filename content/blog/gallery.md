@@ -4,10 +4,9 @@ date: 2018-03-07T11:59:04-08:00
 categories: ["docs"]
 toc: true
 ---
-# Gallery
 This theme includes a prebuilt gallery layout & lightbox pop-up that can be configured via Hugo's Data feature.
 
-## How to Add a Gallery Page
+# How to Add a Gallery Page
 - Create a new page `content/gallery.md`
 - Optionally, you can add the page to the [navigation menu](/blog/navigation/) by adding the following to the front-matter:
 ```
@@ -18,7 +17,7 @@ menu:
         weight: 3
 ```
 
-### How to Add a Single Gallery Image
+## How to Add a Single Gallery Image
 - with the following front-matter content:
 ```
 ---
@@ -50,7 +49,7 @@ images:
   - title: If filled out it will display this beneath the image when using the lightbox pop-up
   - description: If filled out it will display this in the lightbox description
 
-### How to Add Multiple Gallery Images
+## How to Add Multiple Gallery Images
 
 - Add additional 'image' blocks to the data file `data/gallery.yml`:
 
@@ -89,7 +88,7 @@ images:
 ---
 ```
 
-### Working Example for This Site
+# Working Example for This Site
 Below is the code used to create the gallery page of this demo site:
 
 ```

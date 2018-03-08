@@ -4,13 +4,12 @@ date: 2018-02-17T11:59:04-08:00
 categories: ["docs"]
 toc: true
 ---
-# CSS Grid
 This theme uses a mobile-first CSS Grid to create our grid layout with overrides for screens larger than 1280px.
 
-## Grid
+# Grid
 The `grid` CSS class defines the base grid:
 
-### Mobile
+## Mobile
 ```
 .grid {
   display: grid;
@@ -30,7 +29,7 @@ The `grid` CSS class defines the base grid:
   - sidebar: auto
   - footer: 50px height
 
-### Larger than 1280px
+## Larger than 1280px
 ```
 @media (min-width: 1280px) {
   .grid {
@@ -46,7 +45,7 @@ You'll notice that there are only 4 rows defined for larger screens, this is bec
   - main content: auto
   - footer: 54px height
 
-## Grid Areas
+# Grid Areas
 We assign a grid area to each one of the 5 rows created by our grid using the `grid-area` attribute.
 
 - header
@@ -60,10 +59,10 @@ We assign a grid area to each one of the 5 rows created by our grid using the `g
 - footer
   - `grid-area: ft;`
 
-## Grid Template Areas
+# Grid Template Areas
 Now that our grid and grid areas have been defined we can use them to create `template areas` that _visually_ define the grid for specific pages. The layout is a literal representation of the 12 columns and 5 rows defined above. 
 
-### Mobile
+## Mobile
 ```
 #index {
   grid-template-areas: 
@@ -81,7 +80,7 @@ We currently define the template for the following types of pages:
 - About
 - Gallery
 
-### Larger than 1280px
+## Larger than 1280px
 The mobile-first focus of this theme means that the mobile versions are all identical to the `#index` posted above.
 
 Here's an example of how that template differs for larger screens, You can see that the 3rd row is significantly different - we include some blank spaces as well as removing the 4th row completely by splitting the 3rd row between content _and_ sidebar rather than the mobile version which defaults to 1 area per row:
