@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid with CSS Grid &vert; chrisanthropic</title>
+
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.37" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Grid with CSS Grid &middot; chrisanthropic">
+    <meta property="og:description" content="">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="alternate" type="application/rss+xml" title="chrisanthropic" href="https://slim-pickins-hugo-theme.netlify.com/index.xml" />
+</head>
+<body>
+
+
+<div class="grid" id="single">
+  <header class="main-head">
+    
+      <img src="/images/banner.png">
+    
+</header>
+
+  <nav>
+    <input id="hnav" type="checkbox" name="hnav">
+    <label for="hnav">Menu</label>
+  <div>
+    <div class="hnav-content">
+      <ul>
+        
+          
+          <li ><a href="/" title="main">home</a></li>
+        
+          <li  class="active"><a href="/blog/" title="">blog</a></li>
+        
+          <li ><a href="/gallery/" title="Gallery">gallery</a></li>
+        
+          <li ><a href="/about/" title="About">about</a></li>
+        
+      </ul>
+    </div>
+    <div class="hnav-content">
+      <ul>
+        
+          
+          <li><a href="https://www.linkedin.com" title=""><span class="icon-linkedin"></span></a></li>
+        
+          <li><a href="https://www.tumblr.com" title=""><span class="icon-tumblr"></span></a></li>
+        
+          <li><a href="https://www.facebook.com" title=""><span class="icon-facebook"></span></a></li>
+        
+          <li><a href="https://www.twitter.com" title=""><span class="icon-twitter"></span></a></li>
+        
+          <li><a href="https://www.github.com" title=""><span class="icon-github"></span></a></li>
+        
+          <li><a href="/index.xml" title=""><span class="icon-rss"></span></a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="content">
+    <article>
+      <h2><a href="https://slim-pickins-hugo-theme.netlify.com/blog/css-grid/">Grid with CSS Grid</a></h2>
+                <section class="md-cats">
+                <p class="postmeta">17 February 2018</p>
+
+                        <p>
+                            
+                        </p>
+
+                </section>
+    
+
+<h1 id="css-grid">CSS Grid</h1>
+
+<p>This theme uses a mobile-first CSS Grid to create our grid layout with overrides for screens larger than 1280px.</p>
+
+<h2 id="grid">Grid</h2>
+
+<p>The <code>grid</code> CSS class defines the base grid:</p>
+
+<h3 id="mobile">Mobile</h3>
+
+<pre><code>.grid {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 44px auto auto 50px;
+}
+</code></pre>
+
+<ul>
+<li>spread over 100% width and 100vh height of the screen</li>
+<li>12 evenly divided columns</li>
+<li>5 rows
+
+<ul>
+<li>header: 50px height</li>
+<li>navigation: 44px height</li>
+<li>main content: auto</li>
+<li>sidebar: auto</li>
+<li>footer: 50px height</li>
+</ul></li>
+</ul>
+
+<h3 id="larger-than-1280px">Larger than 1280px</h3>
+
+<pre><code>@media (min-width: 1280px) {
+  .grid {
+      grid-template-rows: 300px 44px auto 54px;
+  }
+</code></pre>
+
+<p>You&rsquo;ll notice that there are only 4 rows defined for larger screens, this is because on larger screens we can add a sidebar to the same row as the main content rather than it&rsquo;s own row. This is explained in more detail below in the <strong>Grid Template Areas</strong> section.</p>
+
+<ul>
+<li>4 rows
+
+<ul>
+<li>header: 300px height</li>
+<li>navigation: 44px height</li>
+<li>main content: auto</li>
+<li>footer: 54px height</li>
+</ul></li>
+</ul>
+
+<h2 id="grid-areas">Grid Areas</h2>
+
+<p>We assign a grid area to each one of the 5 rows created by our grid using the <code>grid-area</code> attribute.</p>
+
+<ul>
+<li>header
+
+<ul>
+<li><code>grid-area: hd;</code></li>
+</ul></li>
+<li>nav
+
+<ul>
+<li><code>grid-area: hnav;</code></li>
+</ul></li>
+<li>main
+
+<ul>
+<li><code>grid-area: main;</code></li>
+</ul></li>
+<li>aside
+
+<ul>
+<li><code>grid-area: sd;</code></li>
+</ul></li>
+<li>footer
+
+<ul>
+<li><code>grid-area: ft;</code></li>
+</ul></li>
+</ul>
+
+<h2 id="grid-template-areas">Grid Template Areas</h2>
+
+<p>Now that our grid and grid areas have been defined we can use them to create <code>template areas</code> that <em>visually</em> define the grid for specific pages. The layout is a literal representation of the 12 columns and 5 rows defined above.</p>
+
+<h3 id="mobile-1">Mobile</h3>
+
+<pre><code>#index {
+  grid-template-areas: 
+    &quot;hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd&quot;
+    &quot;hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav&quot;
+    &quot;main main main main main main main main main main main main&quot;
+    &quot;sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd&quot;
+    &quot;ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft&quot;;
+}
+</code></pre>
+
+<p>We currently define the template for the following types of pages:
+- Index
+- Single
+- About
+- Gallery</p>
+
+<h3 id="larger-than-1280px-1">Larger than 1280px</h3>
+
+<p>The mobile-first focus of this theme means that the mobile versions are all identical to the <code>#index</code> posted above.</p>
+
+<p>Here&rsquo;s an example of how that template differs for larger screens, You can see that the 3rd row is significantly different - we include some blank spaces as well as removing the 4th row completely by splitting the 3rd row between content <em>and</em> sidebar rather than the mobile version which defaults to 1 area per row:</p>
+
+<pre><code>  #index {
+    grid-template-areas: 
+      &quot;hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd&quot;
+      &quot;hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav &quot;
+      &quot;.    .    main main main main main sd   sd   sd   .    .&quot;
+      &quot;ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft&quot;;
+  }
+</code></pre>
+
+<ul>
+<li>The <code>.</code> in this case means leave the area blank</li>
+<li>Followed by 5 <code>columns</code> of <code>main</code></li>
+<li>Followed by 3 <code>columns</code> of <code>sd</code></li>
+<li>Followed by an additional 2 <code>columns</code> of empty space</li>
+</ul>
+
+
+</article>
+  </main>
+    <aside class="side">
+  <h2>Table of Contents</h2>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#css-grid">CSS Grid</a>
+<ul>
+<li><a href="#grid">Grid</a>
+<ul>
+<li><a href="#mobile">Mobile</a></li>
+<li><a href="#larger-than-1280px">Larger than 1280px</a></li>
+</ul></li>
+<li><a href="#grid-areas">Grid Areas</a></li>
+<li><a href="#grid-template-areas">Grid Template Areas</a>
+<ul>
+<li><a href="#mobile-1">Mobile</a></li>
+<li><a href="#larger-than-1280px-1">Larger than 1280px</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
+  <footer class="main-footer">
+  <div>
+    <div class="footer-content">
+        <p>Created by Chrisanthropic</p> 
+
+    </div>
+    <div class="footer-content">
+        <p>Powered by Hugo</p> 
+
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
