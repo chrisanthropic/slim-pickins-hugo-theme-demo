@@ -72,12 +72,6 @@ The `socials` menu is defined and modified in the config.toml file using Hugo's 
 Below is an example of the code used to generate the socials menu of this demo:
 
 ```
-[[menu.main]]
-  name = "blog"
-  identifier = "blog"
-  url = "/blog/"
-  weight = 2
-
 [[menu.socials]]
   name = "linkedin"
   identifier = "linkedin"
