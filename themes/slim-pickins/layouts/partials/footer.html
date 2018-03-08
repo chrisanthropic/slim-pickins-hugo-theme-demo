@@ -1,10 +1,10 @@
 <footer class="main-footer">
   <div>
     <div class="footer-content">
-        {{ partial "content_left_footer.html" . }}
+        <p>{{ .Site.Data.footer.content.left }}</p>
     </div>
     <div class="footer-content">
-        {{ partial "content_right_footer.html" . }}
+        <p>{{ .Site.Data.footer.content.right }}</p>
     </div>
   </div>
 </footer>
