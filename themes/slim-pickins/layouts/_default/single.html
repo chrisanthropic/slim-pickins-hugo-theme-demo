@@ -24,6 +24,7 @@
   <aside class="side">
     {{ if .Params.toc }}{{ partial "toc-sidebar.html" . }}{{ end }}
     {{ partial "recent_posts.html" . }}
+    {{ if .Params.categorylist }}{{ partial "categories_list.html" . }}{{ end }}
   </aside>
   {{ partial "footer.html" . }}
 </div>
