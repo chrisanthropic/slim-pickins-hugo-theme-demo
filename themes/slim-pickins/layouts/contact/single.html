@@ -1,0 +1,37 @@
+{{ partial "head.html" . }}
+
+<div class="grid" id="contact">
+  {{ partial "header.html" . }}
+  {{ partial "horizontal_navigation.html" . }}
+
+  <main class="content">
+  <h1 class="">Contact</h1>
+    <form name="contact" netlify netlify-honeypot="_gotcha" action="/contact/thanks/">
+      <div class="">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your name" required="">
+      </div>
+      <div class="">
+        <label for="_replyto">Email</label>
+        <input type="email" name="_replyto" placeholder="Your email" required=""/>
+      </div>
+      <div class="">
+        <label for="_subject">Subject</label>
+        <input type="text" name="_subject" placeholder="Subject" required=""/>
+      </div>
+      <div class="">
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Your Message" required=""></textarea>
+      </div>
+      <div class="">
+        <input type="submit" value="Send Email" class="button">
+        <input type="text" name="_gotcha" style="display:none" />
+      </div>
+    </form>
+    {{ .Content }}
+  </main>
+  {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>
