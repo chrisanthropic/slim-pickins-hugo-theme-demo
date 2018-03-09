@@ -798,7 +798,7 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
       "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
-      ".    .    .    main main main main main main .    .    .   "
+      ".    .    .    .    main main main main .    .    .    .   "
       "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
   }
   nav {
@@ -873,7 +873,7 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
   }
 
   input[type=text],[type=email]{
-    width: 25vw;
+    width: 95%;
   }
 
   footer div {
