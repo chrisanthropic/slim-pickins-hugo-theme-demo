@@ -4,12 +4,12 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "images"
+media_folder: "site/static/images"
 
 collections:
   - name: "post"
     label: "Post"
-    folder: "_posts"
+    folder: "content/blog"
     create: true
     slug: "---"
     fields:
@@ -20,20 +20,45 @@ collections:
       - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
 
-  - name: "page"
-    label: "Page"
-    folder: "_pages"
-    create: true
-    slug: ".md"
-    fields:
-      - {label: "Layout", name: "layout", widget: "select", options: ["about", "blog", "contact", "gallery", "page"]}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Permalink", name: "permalink", widget: "hidden", default: "//"}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/_index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Body, name: body, widget: markdown}
+          - label: Contact Entries
+            name: contact_entries
+            widget: list
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+      - file: "content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "content/gallery.md"
+        label: "Gallery Page"
+        name: "gallery"
+        fields:
+          - {label: Title, name: title, widget: string}
 
   - name: "layouts"
     label: "Layouts"
-    folder: "_layouts"
+    folder: "themes/slim-pickins/layouts"
     extension: "html"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
