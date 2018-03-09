@@ -158,6 +158,13 @@ footer {
 #TableOfContents {
   background-color: #ffe4e9;
   color: black;
+  display: flex;
+  justify-content: left;
+  font-size: .9em;
+}
+
+#TableOfContents li {
+  margin-left: -20px;
 }
 
 /*********************
