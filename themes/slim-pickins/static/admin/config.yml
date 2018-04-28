@@ -4,12 +4,12 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "images"
+media_folder: "content/images"
 
 collections:
   - name: "post"
     label: "Post"
-    folder: "_posts"
+    folder: "content/blog"
     create: true
     slug: "---"
     fields:
@@ -25,7 +25,7 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "site/content/about.md"
+        file: "content/about.md"
         fields:
           - {label: "Title", name: "Title", widget: "string"}
           - {label: "Layout", name: "layout", widget: "select", options: ["about", "blog", "contact", "gallery", "page"]}
