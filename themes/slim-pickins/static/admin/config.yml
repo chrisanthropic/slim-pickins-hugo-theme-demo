@@ -31,7 +31,7 @@ collections:
             name: "Title"
             widget: "string"
           - label: "Layout"
-            name: "layout"
+            name: "type"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
           - label: "Logo"
