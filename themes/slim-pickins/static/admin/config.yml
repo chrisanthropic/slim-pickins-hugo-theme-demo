@@ -31,7 +31,7 @@ collections:
             name: "Title"
             widget: "string"
           - label: "Layout"
-            name: "layout"
+            name: "type"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
           - label: "Logo"
@@ -44,10 +44,10 @@ collections:
           - label: "Menu"
             name: "menu"
             widget: "object"
-         - label: "Main"
-           name: "main"
-           widget: "object"
-           fields:
-             - label: "Weight"
-               name: "weight"
-               widget: "number"
+          - label: "Main"
+            name: "main"
+            widget: "object"
+            fields:
+              - label: "Weight"
+                name: "weight"
+                widget: "number"
