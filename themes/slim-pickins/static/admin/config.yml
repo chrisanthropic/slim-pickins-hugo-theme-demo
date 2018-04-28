@@ -4,61 +4,30 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images"
+media_folder: "images"
 
 collections:
   - name: "post"
     label: "Post"
-    folder: "content/blog"
+    folder: "_posts"
     create: true
     slug: "---"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Keywords", name: "keywords", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/_index.md"
-        label: "Home Page"
-        name: "home"
-        fields:
-          - {label: Title, name: title, widget: string}
-      - file: "content/about.md"
-        label: "About Page"
+      - label: "About Page"
         name: "about"
+        file: "site/content/about.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Text
-                name: text
-                widget: text
-      - file: "content/contact.md"
-        label: "Contact Page"
-        name: "contact"
-        fields:
-          - {label: Title, name: title, widget: string}
-      - file: "content/gallery.md"
-        label: "Gallery Page"
-        name: "gallery"
-        fields:
-          - {label: Title, name: title, widget: string}
-
-  - name: "layouts"
-    label: "Layouts"
-    folder: "themes/slim-pickins/layouts"
-    extension: "html"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-      - {label: "Title", name: "title", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false} 
+          - {label: "Title", name: "Title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "select", options: ["about", "blog", "contact", "gallery", "page"]}
+          - {label: "Logo", name: "logo", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
