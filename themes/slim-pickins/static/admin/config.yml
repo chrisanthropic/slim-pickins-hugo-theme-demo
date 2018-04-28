@@ -44,10 +44,11 @@ collections:
           - label: "Menu"
             name: "menu"
             widget: "object"
-            - label: "Main"
-              name: "main"
-              widget: "object"
-              fields:
-                - label: "Weight"
-                  name: "weight"
-                  widget: "number"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
