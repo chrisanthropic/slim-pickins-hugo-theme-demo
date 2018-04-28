@@ -34,13 +34,6 @@ collections:
             name: "type"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
-          - label: "Logo"
-            name: "logo"
-            widget: "string"
-          - label: "Body"
-            name: "body"
-            widget: "markdown"
-            required: fals
           - label: "Menu"
             name: "menu"
             widget: "object"
@@ -52,3 +45,10 @@ collections:
                   - label: "Weight"
                     name: "weight"
                     widget: "number"
+          - label: "Logo"
+            name: "logo"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: fals
