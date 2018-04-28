@@ -6,7 +6,7 @@
 
   <main class="content">
   <h1 class="">Contact</h1>
-    <form name="contact" netlify netlify-honeypot="_gotcha" action="/contact/thanks/">
+    <form name="contact" netlify netlify-honeypot="poohbear" action="/contact/thanks/">
       <div class="">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Your name" required="">
@@ -23,9 +23,10 @@
         <label for="message">Message</label>
         <textarea name="message" placeholder="Your Message" required=""></textarea>
       </div>
+      <div data-netlify-recaptcha></div>
       <div class="">
         <input type="submit" value="Send Email" class="button">
-        <input type="text" name="_gotcha" style="display:none" />
+        <input type="text" name="poohbear" style="display:none" />
       </div>
     </form>
     {{ .Content }}
