@@ -1,6 +1,6 @@
 ---
 Title: About
-type: about
+layout: about
 logo: "/images/author.jpg"
 menu:
   main:
