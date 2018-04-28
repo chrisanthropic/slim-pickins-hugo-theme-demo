@@ -4,7 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "content/images"
+media_folder: "site/static/images"
+public_folder: "/images"
 
 collections:
   - name: "post"
@@ -30,24 +31,99 @@ collections:
           - label: "Title"
             name: "Title"
             widget: "string"
-          - label: "Layout"
+          - label: "Type"
             name: "type"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
           - label: "Logo"
             name: "logo"
             widget: "string"
           - label: "Body"
             name: "body"
             widget: "markdown"
-            required: fals
+            required: false
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/contact.md"
+        fields:
+          - label: "Title"
+            name: "Title"
+            widget: "string"
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            options: ["about", "blog", "contact", "gallery", "page"]
           - label: "Menu"
             name: "menu"
             widget: "object"
-            - label: "Main"
-              name: "main"
-              widget: "object"
-              fields:
-                - label: "Weight"
-                  name: "weight"
-                  widget: "number"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
+      - name: "gallery"
+        label: "Gallery Page"
+        file: "content/gallery.md"
+        fields:
+          - label: "Title"
+            name: "Title"
+            widget: "string"
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            options: ["about", "blog", "contact", "gallery", "page"]
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
+      - name: "home"
+        label: "Home Page"
+        file: "content/_index.md"
+        fields:
+          - label: "Title"
+            name: "Title"
+            widget: "string"
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
