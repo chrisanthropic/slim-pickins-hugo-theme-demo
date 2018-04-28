@@ -4,7 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "content/images"
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
   - name: "post"
@@ -31,7 +32,7 @@ collections:
             name: "Title"
             widget: "string"
           - label: "Type"
-            name: "layout"
+            name: "type"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
           - label: "Menu"
