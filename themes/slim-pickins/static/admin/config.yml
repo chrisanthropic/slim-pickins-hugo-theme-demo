@@ -127,23 +127,3 @@ collections:
             name: "body"
             widget: "markdown"
             required: false
-  - name: "footer"
-    label: "Footer"
-    files:
-      - name: "Footer"
-        label: "Footer"
-        file: "data/footer.yml"
-        fields:
-          - label: "name"
-            name: "name"
-            widget: "string"
-          - label: "content"
-            name: "content"
-            widget: "object"
-            fields:
-              - label: "left"
-                name: "left"
-                widget: "object"
-              - label: "right"
-                name: "left"
-                widget: "object"
