@@ -30,8 +30,8 @@ collections:
           - label: "Title"
             name: "Title"
             widget: "string"
-          - label: "Layout"
-            name: "type"
+          - label: "Type"
+            name: "layout"
             widget: "select"
             options: ["about", "blog", "contact", "gallery", "page"]
           - label: "Menu"
