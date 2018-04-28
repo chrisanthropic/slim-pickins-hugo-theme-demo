@@ -105,3 +105,25 @@ collections:
             name: "body"
             widget: "markdown"
             required: false
+      - name: "home"
+        label: "Home Page"
+        file: "content/_index.md"
+        fields:
+          - label: "Title"
+            name: "Title"
+            widget: "string"
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Weight"
+                    name: "weight"
+                    widget: "number"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
