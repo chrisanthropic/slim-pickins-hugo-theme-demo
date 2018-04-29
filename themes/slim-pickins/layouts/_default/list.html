@@ -10,13 +10,12 @@
                 <div class="md-cats">
                 <a href="{{ .Permalink }}"><img src="{{  .Params.thumbnail }}" >
                 {{ .Date.Format "02 January 2006" }}
-                        <h2>{{ .Title }}</h2></a>
-                        <p>
+                        <h2>{{ .Title }}</h2>
+                </a>
                             {{ if isset .Params "categories" }}
                                 {{ $baseUrl := .Site.BaseURL }}
-                                {{ range .Params.categories }}<span class="postmeta">categories:</span> <a href="{{ $baseUrl }}categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
+                                {{ range .Params.categories }}<span class="postmeta">categories: <a href="{{ $baseUrl }}categories/{{ . | urlize }}">{{ . }}</span></a>{{ end }}
                             {{ end }}
-                        </p>
 
                 </div>
                 {{ end }}

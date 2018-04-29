@@ -407,7 +407,7 @@ input[type=radio]:checked + label::after {
 
 /* Post Metadata */
 .postmeta {
-  font-size: 0.875em;
+  font-size: 0.8em;
 }
 
 .md-cats {
@@ -418,7 +418,6 @@ input[type=radio]:checked + label::after {
 
 .md-cats h2 {
   margin: 0;
-  width: 730px;
 }
 
 .md-cats a:hover {
@@ -432,7 +431,7 @@ input[type=radio]:checked + label::after {
 .md-cats img {
   max-width: 150px;
   max-height: 75px;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
   float: left;
 }
 
@@ -913,6 +912,10 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
 
   .content {
     margin: 20px;
+  }
+
+  .md-cats h2 {
+    width: 730px;
   }
 
   input[type=text],[type=email]{
