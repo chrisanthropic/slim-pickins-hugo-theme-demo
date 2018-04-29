@@ -433,6 +433,10 @@ ul.pagination {
   list-style-type: none;
 }
 
+article img {
+  max-width: 100%;
+}
+
 /**********
  * Footer *
  **********/
