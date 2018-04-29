@@ -418,6 +418,10 @@ input[type=radio]:checked + label::after {
   margin: 0;
 }
 
+.md-cats img {
+  width: 150px;
+}
+
 /*************************
  * Blog / Post / Content *
  *************************/
