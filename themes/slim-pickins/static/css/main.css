@@ -411,15 +411,29 @@ input[type=radio]:checked + label::after {
 }
 
 .md-cats {
-  margin-bottom: 30px;
+  border-bottom: solid #272727 1px;
+  padding: 10px 0;
+  list-style: none;
 }
 
 .md-cats h2 {
   margin: 0;
+  width: 730px;
+}
+
+.md-cats a:hover {
+  filter: brightness(80%);
+}
+
+.md-cats a::after {
+  background: none;
 }
 
 .md-cats img {
-  width: 150px;
+  max-width: 150px;
+  max-height: 75px;
+  margin-right: 10px;
+  float: left;
 }
 
 /*************************
@@ -430,20 +444,31 @@ input[type=radio]:checked + label::after {
 }
 
 .content p {
-  margin-bottom: 10px;    
+  margin-bottom: 10px;
 }
 
 .content h2 {
   margin-bottom: 0;
 }
 
+article img {
+  max-width: 100%;
+}
+
+/**************
+ * Pagination *
+ **************/
 ul.pagination {
   display: inline-flex;
   list-style-type: none;
 }
 
-article img {
-  max-width: 100%;
+.pagination__item--current {
+  background-color: #ffdaf4;
+}
+
+.pagination__link {
+  margin: 15px;
 }
 
 /**********
