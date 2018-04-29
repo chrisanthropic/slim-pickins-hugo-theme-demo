@@ -424,6 +424,11 @@ input[type=radio]:checked + label::after {
 .content {
   margin: 10px;
 }
+
+.content p {
+  margin-bottom: 10px;    
+}
+
 .content h2 {
   margin-bottom: 0;
 }
