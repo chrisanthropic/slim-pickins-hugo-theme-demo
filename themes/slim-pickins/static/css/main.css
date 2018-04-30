@@ -108,6 +108,15 @@ footer {
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
 
+#blog {
+  grid-template-areas: 
+    "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+    "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+    "main main main main main main main main main main main main"
+    "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
+    "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+}
+
 #single {
   grid-template-areas: 
     "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
@@ -809,6 +818,13 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
   }
 
   #index {
+    grid-template-areas: 
+      "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+      "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav "
+      ".    .    main main main main main sd   sd   sd   .    ."
+      "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+  }
+  #blog {
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
       "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav "
